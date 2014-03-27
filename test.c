@@ -5,7 +5,7 @@ int line_vector_test(int i1,int i2,int i3,int i4,char *msg,
                 int o1,int o2,int o3,int o4, int (*func)(int,int *))
 {
   int list[4]={i1,i2,i3,i4};
-  if (msg) printf("%s - ",msg); 
+  if (msg) printf("%s - ",msg);
   else {
     printf("Tilting {%d,%d,%d,%d} left yields {%d,%d,%d,%d} - ",
              i1,i2,i3,i4,o1,o2,o3,o4);
@@ -19,7 +19,7 @@ int line_vector_test(int i1,int i2,int i3,int i4,char *msg,
              i1,i2,i3,i4,list[0],list[1],list[2],list[3],
              o1,o2,o3,o4);
       return -1;
-    } 
+    }
   printf("PASSED.\n");
   return 0;
   
