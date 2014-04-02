@@ -79,6 +79,7 @@ apples
     return 0;
 }
 
+/*
 int tilt_line_right(int length, int *line){
     reverseLine(length,line);
     tilt_line_left(length,line);
@@ -103,3 +104,4 @@ void reverseLine(int length, int *line) {
         line[length - 1 - i] = it;
     }
 }
+*/
