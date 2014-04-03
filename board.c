@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "2048.h"
+#include <string.h>
 
 int **board_create(int size) {
     int i;
@@ -33,7 +34,7 @@ int board_display(int size, int **board) {
 }
 
 int ** boardCopy(int size, int **board) {
-    if (size < 1 || size > 255) return -1;
+    if (size < 1 || size > 255) NULL;
     int **boardCopy = board_create(size);
     memcpy(boardCopy, board, size * size);
     /* int x,y;
