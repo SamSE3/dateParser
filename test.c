@@ -41,6 +41,7 @@ int test_tilt_left()
   e|=ttl_vector(1,2,4,8,"Distinct values don't combine",1,2,4,8);
   e|=ttl_vector(1,1,1,1,"Combinations don't cascade",2,2,0,0);
   e|=ttl_vector(2,1,1,2,"Combinations don't cascade 2",2,2,2,0);
+  e|=ttl_vector(1,0,0,2,"Bring together",1,2,0,0);
   e|=ttl_vector(0,0,1,1,NULL,2,0,0,0);
   e|=ttl_vector(4,0,1,1,NULL,4,2,0,0);
   e|=ttl_vector(2,0,1,1,NULL,2,2,0,0);
