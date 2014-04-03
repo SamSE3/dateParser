@@ -52,12 +52,51 @@ int tilt_line_left(int length, int *line) {
 int tilt_board_left(int size, int **board) {
     int x, y;
     if (size < 1 || size > 255) return -1;    
-    int line[size];
+    int *line[size];
     for (y = 0; y < size; y++) {
         for (x = 0; x < size; x++) {
-            line[x] = board[x][y];
+            line[x] = &board[x][y];
         }
-        tilt_line_left(size, line);
+        tilt_line_left(size, *line);
+    }
+    return 0;
+}
+
+int tilt_board_right(int size, int **board) {
+    int x, y;
+    if (size < 1 || size > 255) return -1;    
+    int *line[size];
+    for (y = 0; y < size; y++) {
+        for (x = size-1; x >=0; x++) {
+            line[x] = &board[x][y];
+        }
+        tilt_line_left(size, *line);        
+    }
+    return 0;
+}
+
+int tilt_board_up(int size, int **board) {
+    int x, y;
+    if (size < 1 || size > 255) return -1;    
+    int *line[size];
+    for (x = 0; x < size; x++) {
+        for (y = 0; y < size; y++) {
+            line[x] = &board[x][y];
+        }
+        tilt_line_left(size, *line);
+    }
+    return 0;
+}
+
+int tilt_board_down(int size, int **board) {
+    int x, y;
+    if (size < 1 || size > 255) return -1;    
+    int *line[size];
+    for (x = 0; x < size; x++) {
+        for (y = size-1; y >=0; y++) {
+            line[x] = &board[x][y];
+        }
+        tilt_line_left(size, *line);        
     }
     return 0;
 }
