@@ -51,11 +51,13 @@ int tilt_line_left(int length, int *line) {
 
 int tilt_board_left(int size, int **board) {
     int x, y;
-    int line[size]
+    if (size < 1 || size > 255) return -1;    
+    int line[size];
     for (y = 0; y < size; y++) {
         for (x = 0; x < size; x++) {
             line[x] = board[x][y];
         }
         tilt_line_left(size, line);
     }
+    return 0;
 }
