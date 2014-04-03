@@ -7,8 +7,8 @@
 int main(int argc,char **argv)
 {
   // Randomise random unmber generator initial state.
-  // srandom(time(0));
-     srand(time(0));
+  //srandom(time(0));
+  srand(time(0));
   
   int board_size=4;
   int **board=board_create(board_size);
