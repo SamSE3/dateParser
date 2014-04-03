@@ -6,8 +6,7 @@ int tilt_line_left(int length, int *line) {
     // make sure vector length is sensible
     if (length < 1 || length > 255) return -1;
 
-    //combine numbers
-    
+    //combine numbers    
     i = (length - 1);
     while (i > 0) {
         if (line[i] != 0) {
@@ -28,34 +27,7 @@ int tilt_line_left(int length, int *line) {
             i--;
         }
     }    
-/*
 
-apples
-    i = 0;
-    while (i < length) {
-        if (line[i] != 0) {
-            j = i;
-            j++;
-            if (line[j] == 0) {
-                while (j < length && line[j] == 0) {
-                    j--;
-                }
-                if (line[i] == line[j]) {
-                    line[i] = 2 * line[j];
-
-                } else {
-                    line[i + 1] = line[j];
-
-                }
-                line[j] = 0;
-            } else if (line[i] == line[j]) {
-                line[i] = 2 * line[i];
-                line[j] = 0;
-            }
-            i++;
-        }
-    }
-*/
     //push left
     i = (length - 1);
     while (i > 0) {
@@ -73,8 +45,6 @@ apples
             i--;
         }
     }
-
-    //line[0]=7;
 
     return 0;
 }
