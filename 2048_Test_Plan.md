@@ -11,49 +11,50 @@ Mission statement: To write a program that emulates the game ‘2048’ as a mea
 Note: It is noted that it should be reversed that’s write tests before code
 
 #Required resources
-##Hardware
+Hardware
 |What		|why|
 |--------------|--------------|
 |		|no specific hardware is required|
 
-##Software	
+Software	
 |What		|why|
 |--------------|--------------|
 |Github 		|for version control|
 |C compiler	|to compile the source code|
 
-##Testing tools	
+Testing tools	
 |What		|why|
 |--------------|--------------|
 |-		|no testing tools|
 
-##Staff
+staff
 |What		|why|
 |--------------|--------------|
 |me		|to do all the coding and testing|
 
 #Testable aspects
-##Unit testing aspects
+Unit testing aspects
 <ul>
 <li>Tilting a row left</li>
 The following all use a specific case of this
-*Tilting a row right
-*Tilting a column up
-*Tilting a column down
+<ul>
+* Tilting a row right
+* Tilting a column up
+* Tilting a column down
+
 <li>Tilting the board left</li>
 the following use the above respectively
-*Tilting the board right
-*Tilting the board up
-*Tilting the board down
+* Tilting the board right
+* Tilting the board up
+* Tilting the board down
+
 <li>Random insertion of a number into the game</li>
-<li>Create an empty board</li>
-<li></li>
-</ul>
-##Integration testing aspects
-<ul>
-<li>Test tilting left then tilting right</li>
-<li></li>
-</ul>	
+* Create an empty board
+
+Integration testing aspects
+
+* Test tilting left then tilting right
+	
 
 #Non Testable aspects
 -Any graphical user interface that uses these methods
