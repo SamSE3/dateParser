@@ -40,43 +40,40 @@ staff
 Unit testing aspects
 * Tilting a row left
 
-The following all use a specific case of this
-* * Tilting a row right
-* * Tilting a column up
-** Tilting a column down
+ The following all use a specific case of this
+ * Tilting a row right
+ * Tilting a column up
+ * Tilting a column down
 
-<li>Tilting the board left</li>
+* Tilting the board left
 the following use the above respectively
-* Tilting the board right
-* Tilting the board up
-* Tilting the board down
+ * Tilting the board right
+ * Tilting the board up
+ * Tilting the board down
 
-<li>Random insertion of a number into the game</li>
+* Random insertion of a number into the game
 * Create an empty board
 
-</ul>
 Integration testing aspects
-
 * Test tilting left then tilting right
 	
 
 #Non Testable aspects
-- Any graphical user interface that uses these methods
+* Any graphical user interface that uses these methods
 
 #Test Produced documents
-- The specifics of each test
-- Demonstration that all of the test pass
+* The specifics of each test
+* Demonstration that all of the test pass
 
 #Risks and dependencies
-- That the staff do not have the ability to write the program for lack of programming knowledge
-- That there will not be enough time to complete the project given other staff commitments
+* That the staff do not have the ability to write the program for lack of programming knowledge
+* That there will not be enough time to complete the project given other staff commitments
 
 #Project Criteria
-##Project Goals
-##Goal
-##Success and Failure measured by
+Project Goals
+Goal
+Success and Failure measured by
 	
 #References
-- Using outline as per http://www.wikihow.com/Write-a-Test-Plan
-- Markdown as per https://help.github.com/articles/markdown-basics and https://help.github.com/articles/github-flavored
-- markdown
+* Using outline as per http://www.wikihow.com/Write-a-Test-Plan
+* Markdown as per https://help.github.com/articles/markdown-basics and https://help.github.com/articles/github-flavored-markdown
