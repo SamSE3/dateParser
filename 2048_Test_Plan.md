@@ -38,12 +38,12 @@ staff
 
 #Testable aspects
 Unit testing aspects
-<ul>
-<li>Tilting a row left</li>
+* Tilting a row left
+
 The following all use a specific case of this
-* Tilting a row right
-* Tilting a column up
-* Tilting a column down
+* * Tilting a row right
+* * Tilting a column up
+** Tilting a column down
 
 <li>Tilting the board left</li>
 the following use the above respectively
