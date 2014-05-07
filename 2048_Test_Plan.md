@@ -73,9 +73,11 @@ Integration testing aspects
 
 #Project Criteria
 Goals
+
 The aim is that all possible types of input are tested and that the program passes these tests
 
 Success and Failure measured by
+
 Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the program
 	
 #References
