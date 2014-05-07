@@ -12,22 +12,26 @@ Note: It is noted that it should be reversed that’s write tests before code
 
 #Required resources
 Hardware
+
 |What		|why|
 |--------------|--------------|
 |		|no specific hardware is required|
 
-Software	
+Software
+
 |What		|why|
 |--------------|--------------|
 |Github 		|for version control|
 |C compiler	|to compile the source code|
 
-Testing tools	
+Testing tools
+
 |What		|why|
 |--------------|--------------|
 |-		|no testing tools|
 
 staff
+
 |What		|why|
 |--------------|--------------|
 |me		|to do all the coding and testing|
@@ -57,19 +61,22 @@ Integration testing aspects
 	
 
 #Non Testable aspects
--Any graphical user interface that uses these methods
+- Any graphical user interface that uses these methods
+
 #Test Produced documents
--The specifics of each test
--Demonstration that all of the test pass
+- The specifics of each test
+- Demonstration that all of the test pass
+
 #Risks and dependencies
--That the staff do not have the ability to write the program for lack of programming knowledge
--That there will not be enough time to complete the project given other staff commitments
+- That the staff do not have the ability to write the program for lack of programming knowledge
+- That there will not be enough time to complete the project given other staff commitments
+
 #Project Criteria
 ##Project Goals
 ##Goal
 ##Success and Failure measured by
 	
 #References
--Using outline as per http://www.wikihow.com/Write-a-Test-Plan
--Markdown as per https://help.github.com/articles/markdown-basics and https://help.github.com/articles/github-flavored
--markdown
+- Using outline as per http://www.wikihow.com/Write-a-Test-Plan
+- Markdown as per https://help.github.com/articles/markdown-basics and https://help.github.com/articles/github-flavored
+- markdown
