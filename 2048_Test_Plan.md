@@ -41,7 +41,6 @@ Unit testing aspects
 <ul>
 <li>Tilting a row left</li>
 The following all use a specific case of this
-<ul>
 * Tilting a row right
 * Tilting a column up
 * Tilting a column down
@@ -55,6 +54,7 @@ the following use the above respectively
 <li>Random insertion of a number into the game</li>
 * Create an empty board
 
+</ul>
 Integration testing aspects
 
 * Test tilting left then tilting right
