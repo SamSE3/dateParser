@@ -4,10 +4,11 @@
 Mission statement: To write a program that emulates the game ‘2048’ as a means of introducing and getting to know sub versioning, unit testing and integration testing as part of Software Engineering 3.
 
 	Schedule (iterative every lab/work session)
-			Half		what
-1st		start writing code
-2nd		write test cases (as unit tests)
-*It is noted that it should be reversed that’s write tests before code
+			|Half		|what|
+			|--------------|--------------|
+1|st		|start writing code|
+|2nd		|write test cases (as unit tests)|
+Note: It is noted that it should be reversed that’s write tests before code
 
 #Required resources
 ##Hardware
