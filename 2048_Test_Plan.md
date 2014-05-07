@@ -54,7 +54,7 @@ the following use the above respectively
 
 * Random insertion of a number into the game
 * Flipping the board left
-* Flipping the board right
+ * Flipping the board right
 * Create an empty board
 
 Integration testing aspects
