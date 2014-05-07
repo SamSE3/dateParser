@@ -1,9 +1,10 @@
 
+
 #Introduction
-##General description
+General description  
 Mission statement: To write a program that emulates the game ‘2048’ as a means of introducing and getting to know sub versioning, unit testing and integration testing as part of Software Engineering 3.
 
-##Schedule (iterative every lab/work session)
+Schedule (iterative every lab/work session)  
 |Half|what|
 |--------------|--------------|
 |1st|start writing code|
@@ -11,27 +12,23 @@ Mission statement: To write a program that emulates the game ‘2048’ as a mea
 Note: It is recognised that it should be reversed, that is, write tests before code.
 
 #Required resources
-Hardware
-
+Hardware  
 |What		|why|
 |--------------|--------------|
 |		|no specific hardware is required|
 
-Software
-
+Software  
 |What		|why|
 |--------------|--------------|
 |Github 		|for version control|
 |C compiler	|to compile the source code|
 
-Testing tools
-
+Testing tools  
 |What		|why|
 |--------------|--------------|
 |-		|no testing tools|
 
-Staff
-
+Staff  
 |What		|why|
 |--------------|--------------|
 |me		|to do all the coding and testing|
@@ -66,12 +63,9 @@ Integration testing aspects
 * That there will not be enough time to complete the project given other staff commitments
 
 #Project Criteria
-Goals
-
+Goals  
 The aim is that all possible types of input are tested and that the program passes these tests
-
-Success and Failure measured by
-
+Success and Failure measured by  
 Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the program
 	
 #References
