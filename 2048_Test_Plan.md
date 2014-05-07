@@ -8,7 +8,7 @@ Mission statement: To write a program that emulates the game ‘2048’ as a mea
 |--------------|--------------|
 |1st|start writing code|
 |2nd|write test cases (as unit tests)|
-Note: It is noted that it should be reversed that’s write tests before code
+Note: It is recognised that it should be reversed, that is, write tests before code.
 
 #Required resources
 Hardware
@@ -30,7 +30,7 @@ Testing tools
 |--------------|--------------|
 |-		|no testing tools|
 
-staff
+Staff
 
 |What		|why|
 |--------------|--------------|
@@ -46,17 +46,19 @@ Unit testing aspects
  * Tilting a column down
 
 * Tilting the board left
+
 the following use the above respectively
  * Tilting the board right
  * Tilting the board up
  * Tilting the board down
 
 * Random insertion of a number into the game
+* Flipping the board left
+* Flipping the board right
 * Create an empty board
 
 Integration testing aspects
 * Test tilting left then tilting right
-	
 
 #Non Testable aspects
 * Any graphical user interface that uses these methods
@@ -70,9 +72,11 @@ Integration testing aspects
 * That there will not be enough time to complete the project given other staff commitments
 
 #Project Criteria
-Project Goals
-Goal
+Goals
+The aim is that all possible types of input are tested and that the program passes these tests
+
 Success and Failure measured by
+Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the program
 	
 #References
 * Using outline as per http://www.wikihow.com/Write-a-Test-Plan
