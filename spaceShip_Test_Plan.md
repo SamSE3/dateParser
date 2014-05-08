@@ -36,7 +36,7 @@ Physical
 |the climate control|to test that it can work in the coldness of space even if turning on near 0k|
 |the clothing warn onboard|to test their durability|
 |the space suits|to test their movability and life support systems|
-|backup parts to any of the above devices| estimate weights|
+|backup parts to any of the above devices| estimate weights and possible degradation|
 
 Software
 
@@ -82,6 +82,8 @@ Unit testing aspects
 * that systems can detect broken components and start secondary systems then shutdown to prevent further damage.
 * that the climate control system can start itself and operate in 0k temperatures outside the craft.
 * the ability of the selected crew to cope with such a voyage.
+* that the rocket system can handle using old fuel (will have seperated)
+* that the life support sysetems 
 …
 
 Integration testing aspects
@@ -97,7 +99,8 @@ The specifics of each test, if those tests pass and the information and reason f
 
 #Risks and dependencies
 That it is not possible to quickly analyse the affects of such a long voyage in such a short amount of time.
-That is it difficult to substatin near 0k temperatures long enough for test to be 100 valid.
+That is it difficult to substatin near 0k temperatures long enough for test to be 100% valid.
+distances and factors may not scale as expected
 
 #Project Criteria
 Goals      
