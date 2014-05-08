@@ -90,6 +90,14 @@ public class Board {
     }
     
     public static void flipBoardLeft(int[][] board) {
+        int temp;
+        for (int i = 0; i < board.length; i++) {
+            for (int j = i + 1; j < board.length; j++) {
+                temp = board[i][j];
+                board[i][j] = board[j][i];
+                board[j][i] = temp;
+            }
+        }        
     }
 
     public static int[][] makeCopy(int[][] board) {

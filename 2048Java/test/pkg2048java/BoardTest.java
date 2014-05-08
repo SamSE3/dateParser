@@ -19,9 +19,18 @@ public class BoardTest {
     
     public BoardTest() {
     }
-    
+    int[][] board, board0, board1;
+    int size;
+
     @Before
     public void setUp() {
+        board = new int[][]{{1, 2, 3, 4},
+        {1, 0, 0, 1},
+        {4, 2, 2, 4},
+        {0, 0, 0, 0}};
+        board0 = new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
+        board1 = new int[][]{{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}};
+        //size = 4;
     }
     
     @After
@@ -76,21 +85,29 @@ public class BoardTest {
     @Test
     public void testTiltBoardLeft() {
         System.out.println("tiltBoardLeft");
-        int[][] board = null;
+        int[][] board2 = {{1, 2, 3, 4},
+        {2, 0, 0, 0},
+        {4, 4, 4, 0},
+        {0, 0, 0, 0}};
+        //Board.printBoardSimple(board2);
         Board.tiltBoardLeft(board);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Board.printBoardSimple(board);
+        org.junit.Assert.assertArrayEquals("tilt board left", board2, board);
     }
 
     @Test
     public void testTiltBoardRight() {
         System.out.println("tiltBoardRight");
-        int[][] board = null;
+        int[][] board2 = {{1, 2, 3, 4},
+        {0, 0, 0, 2},
+        {0, 4, 4, 4},
+        {0, 0, 0, 0}};
+        //Board.printBoardSimple(board2);
         Board.tiltBoardRight(board);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Board.printBoardSimple(board);
+        org.junit.Assert.assertArrayEquals("tilt board right", board2, board);
     }
-
+    
     @Test
     public void testTiltBoardDown() {
         System.out.println("tiltBoardDown");
