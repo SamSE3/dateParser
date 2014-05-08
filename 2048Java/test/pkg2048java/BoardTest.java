@@ -78,23 +78,27 @@ public class BoardTest {
     @Test
     public void testMakeRandomBoard() {
         System.out.println("makeRandomBoard");
-        int size = 0;
-        int[][] expResult = null;
         int[][] result = Board.makeRandomBoard(size);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (result[i][j] != 0 && result[i][j] != 2 && result[i][j] != 4 && result[i][j] != 8) {
+                    fail("random board generates a number which is nit 0,2,4 or 8");
+                }
+            }
+        }
     }
 
     @Test
     public void testMakeBoard() {
         System.out.println("makeBoard");
-        int size = 0;
-        int[][] expResult = null;
         int[][] result = Board.makeBoard(size);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (result[i][j] != 0) {
+                    fail("random board generates a number which is 0");
+                }
+            }
+        }
     }
 
     @Test
