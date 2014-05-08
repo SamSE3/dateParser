@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package pkg2048java;
 
 import org.junit.After;
@@ -16,14 +15,14 @@ import static org.junit.Assert.*;
  * @author SuperNova
  */
 public class TiltTest {
-    
+
     public TiltTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -31,12 +30,8 @@ public class TiltTest {
     @Test
     public void testTiltLeft() {
         System.out.println("tiltLeft");
-        int[] row = null;
-        int[] expResult = null;
-        int[] result = Tilt.tiltLeft(row);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        org.junit.Assert.assertArrayEquals("empty rows don't stay empty", new int[]{0, 0, 0, 0}, Tilt.tiltLeft(new int[]{0, 0, 0, 0}));
+        org.junit.Assert.assertArrayEquals("non combinable don't stay the same", new int[]{1, 2, 3, 4}, Tilt.tiltLeft(new int[]{1, 2, 3, 4}));
     }
 
     @Test
@@ -69,5 +64,5 @@ public class TiltTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }

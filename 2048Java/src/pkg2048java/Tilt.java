@@ -12,7 +12,27 @@ package pkg2048java;
 public class Tilt {
 
     public static int[] tiltLeft(int[] row) {
-        return null;
+        int lastValIndex = -1;
+        boolean lastValCanCombine = true;
+        if (row[0] != 0) {
+            lastValIndex = 0;
+        }
+        for (int i = lastValIndex + 1; i < row.length; i++) { //start at the first non-zero value
+            if (lastValIndex > -1 && row[i] == row[lastValIndex] && lastValCanCombine) {
+                //double value
+                row[lastValIndex] *= 2;
+                row[i] = 0;
+                lastValCanCombine = false;
+            } else if (row[i] > 0) {// move value to the left 
+                lastValIndex++;
+                row[lastValIndex] = row[i];
+                if (i != lastValIndex) {
+                    row[i] = 0;
+                }
+                lastValCanCombine = true;
+            }
+        }
+        return row;
     }
 
     public static int[] tiltRight(int[] row) {
