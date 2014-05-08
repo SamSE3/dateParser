@@ -119,15 +119,6 @@ public class BoardTest {
     }
 
     @Test
-    public void testFlipBoardRight() {
-        System.out.println("flipBoardRight");
-        int[][] board = null;
-        Board.flipBoardRight(board);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    @Test
     public void testMakeCopy() {
         System.out.println("makeCopy");
         int[][] board = null;

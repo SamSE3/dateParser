@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package pkg2048java;
 
 /**
@@ -11,7 +10,7 @@ package pkg2048java;
  * @author SuperNova
  */
 public class Board {
-    
+
     public static final int MRTA = 1;
 
     public static boolean addRandom(int[][] board) {
@@ -23,11 +22,11 @@ public class Board {
     }
 
     public static int[][] makeRandomBoard(int size) {
-return null;
+        return null;
     }
 
     public static int[][] makeBoard(int size) {
-return null;
+        return null;
     }
 
     public static void tiltBoardLeft(int[][] board) {
@@ -45,15 +44,12 @@ return null;
     public static void flipBoardLeft(int[][] board) {
     }
 
-    public static void flipBoardRight(int[][] board) {
-    }
-
     public static int[][] makeCopy(int[][] board) {
         return null;
     }
 
     public static void printBoard(int[][] board) {
-    
+
     }
 
     private static String addPadding(int cell, int pad) {
