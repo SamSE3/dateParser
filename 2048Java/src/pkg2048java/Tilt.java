@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package pkg2048java;
 
 /**
@@ -12,12 +11,19 @@ package pkg2048java;
  */
 public class Tilt {
 
-    static int[] tiltRight(int[] i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static int[] tiltLeft(int[] row) {
+        return null;
     }
 
-    static int[] tiltLeft(int[] i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static int[] tiltRight(int[] row) {
+        return null;
     }
-    
+
+    public static void printRow(int[] row) {
+    }
+
+    public static int[] reverseArray(int[] row) {
+        return null;
+    }
+
 }
