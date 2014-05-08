@@ -48,7 +48,9 @@ public class Board {
     }
 
     public static int[][] makeRandomBoard(int size) {
-        return null;
+        int[][] board = makeBoard(size);
+        addRandom(board, 3);
+        return board;
     }
 
     public static int[][] makeBoard(int size) {
@@ -88,7 +90,7 @@ public class Board {
         }
         flipBoardLeft(board);
     }
-    
+
     public static void flipBoardLeft(int[][] board) {
         int temp;
         for (int i = 0; i < board.length; i++) {
@@ -97,18 +99,54 @@ public class Board {
                 board[i][j] = board[j][i];
                 board[j][i] = temp;
             }
-        }        
+        }
     }
 
     public static int[][] makeCopy(int[][] board) {
         return null;
     }
 
-    public static void printBoard(int[][] board) {
 
+    public static void printBoard(int[][] board) {
+        int maxLength = 0;
+        // get the maximum width of the cell
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                int cellLength = Integer.toString(board[i][j]).length();
+                if (cellLength > maxLength) {
+                    maxLength = cellLength;
+                }
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        //add the rows to a string
+        for (int i = 0; i < board.length; i++) {
+            sb.append('{');
+            for (int j = 0; j < board.length - 1; j++) {
+                sb.append(addPadding(board[i][j], maxLength)); 
+                // add padding to the string to make all cells of equal size
+                sb.append(" ");// always 1 space between cells
+            }
+            sb.append(addPadding(board[i][board.length - 1], maxLength));
+            sb.append("}\n");
+        }
+        //print it
+        System.out.println(sb);
     }
 
     private static String addPadding(int cell, int pad) {
-        return null;
+        String str = Integer.toString(cell);
+        pad -= str.length();
+        //enable the following to center the numbers rather than hard left
+//        while (pad > pad / 2) {
+//            str = " " + str;
+//            pad--;
+//        }
+        String padStr = "";
+        while (pad > 0) {
+            padStr += " ";
+            pad--;
+        }
+        return (padStr + str);
     }
 }
