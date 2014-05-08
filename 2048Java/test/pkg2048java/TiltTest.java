@@ -51,33 +51,22 @@ public class TiltTest {
 
     @Test
     public void testTiltRight() {
-        System.out.println("tiltRight");
-        int[] row = null;
-        int[] expResult = null;
-        int[] result = Tilt.tiltRight(row);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        org.junit.Assert.assertArrayEquals("dose'nt mix values A", new int[]{0, 1, 4, 1}, Tilt.tiltRight(new int[]{1, 2, 2, 1}));
+        org.junit.Assert.assertArrayEquals("dose'nt mix values B", new int[]{0, 1, 4, 4}, Tilt.tiltRight(new int[]{1, 4, 2, 2}));
+        org.junit.Assert.assertArrayEquals("dose'nt mix values C", new int[]{0, 0, 4, 2}, Tilt.tiltRight(new int[]{4, 0, 1, 1}));
+        org.junit.Assert.assertArrayEquals("dose'nt mix values C", new int[]{0, 0, 2, 2}, Tilt.tiltRight(new int[]{2, 0, 1, 1}));
+    }
+
+    @Test
+    public void testReverseArray() {
+        org.junit.Assert.assertArrayEquals("array does not reverse correctly", new int[]{1, 2, 3, 4}, Tilt.reverseArray(new int[]{4, 3, 2, 1}));
     }
 
     @Test
     public void testPrintRow() {
         System.out.println("printRow");
         int[] row = null;
-        Tilt.printRow(row);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Tilt.printRow(new int[]{0, 1, 4, 1});
     }
-
-    @Test
-    public void testReverseArray() {
-        System.out.println("reverseArray");
-        int[] row = null;
-        int[] expResult = null;
-        int[] result = Tilt.reverseArray(row);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+    
 }
