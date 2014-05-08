@@ -19,11 +19,12 @@ public class Tilt {
         }
         for (int i = lastValIndex + 1; i < row.length; i++) { //start at the first non-zero value
             if (lastValIndex > -1 && row[i] == row[lastValIndex] && lastValCanCombine) {
-                //double value
+                // merge and double values
                 row[lastValIndex] *= 2;
                 row[i] = 0;
                 lastValCanCombine = false;
-            } else if (row[i] > 0) {// move value to the left 
+            } else if (row[i] > 0) {
+                // move value to the left 
                 lastValIndex++;
                 row[lastValIndex] = row[i];
                 if (i != lastValIndex) {

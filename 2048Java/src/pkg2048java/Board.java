@@ -14,12 +14,37 @@ public class Board {
     public static final int MRTA = 1;
 
     public static boolean addRandom(int[][] board) {
-                int nosToAdd = (int) ((MRTA + 1) * Math.random()); //1;//
+        int nosToAdd = (int) ((MRTA + 1) * Math.random()); //1;//
         return addRandom(board, nosToAdd);
     }
 
     public static boolean addRandom(int[][] board, int nosToAdd) {
-        return false;
+        int[] x = new int[board.length * board.length],
+                y = new int[board.length * board.length];
+        int tot = 0;
+        // find the non zero values
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                if (board[i][j] == 0) {
+                    x[tot] = i;
+                    y[tot] = j;
+                    tot++;
+                }
+            }
+        }
+        //if cannot add anything return false
+        if (tot == 0) {
+            return false;
+        }
+        // add numbers in random positions
+        while (nosToAdd > 0) {
+            int cell = (int) (tot * Math.random());
+            int val = 2;
+            board[x[cell]][y[cell]] = val;
+            nosToAdd--;
+        }
+        // numbers must of been added
+        return true;
     }
 
     public static int[][] makeRandomBoard(int size) {
@@ -27,11 +52,11 @@ public class Board {
     }
 
     public static int[][] makeBoard(int size) {
-        int[][] board = new int [size][size];
+        int[][] board = new int[size][size];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                board[i][j]=0;                
-            }            
+                board[i][j] = 0;
+            }
         }
         return board;
     }
