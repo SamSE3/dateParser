@@ -62,17 +62,33 @@ public class Board {
     }
 
     public static void tiltBoardLeft(int[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            board[i] = Tilt.tiltLeft(board[i]);
+        }
     }
 
     public static void tiltBoardRight(int[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            board[i] = Tilt.tiltRight(board[i]);
+        }
     }
 
     public static void tiltBoardDown(int[][] board) {
+        flipBoardLeft(board);
+        for (int i = 0; i < board.length; i++) {
+            board[i] = Tilt.tiltRight(board[i]);
+        }
+        flipBoardLeft(board);
     }
 
     public static void tiltBoardUp(int[][] board) {
+        flipBoardLeft(board);
+        for (int i = 0; i < board.length; i++) {
+            board[i] = Tilt.tiltLeft(board[i]);
+        }
+        flipBoardLeft(board);
     }
-
+    
     public static void flipBoardLeft(int[][] board) {
     }
 
