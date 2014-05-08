@@ -14,7 +14,8 @@ public class Board {
     public static final int MRTA = 1;
 
     public static boolean addRandom(int[][] board) {
-        return false;
+                int nosToAdd = (int) ((MRTA + 1) * Math.random()); //1;//
+        return addRandom(board, nosToAdd);
     }
 
     public static boolean addRandom(int[][] board, int nosToAdd) {
@@ -26,7 +27,13 @@ public class Board {
     }
 
     public static int[][] makeBoard(int size) {
-        return null;
+        int[][] board = new int [size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                board[i][j]=0;                
+            }            
+        }
+        return board;
     }
 
     public static void tiltBoardLeft(int[][] board) {
