@@ -5,6 +5,8 @@
  */
 package pkg2048java;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author SuperNova
@@ -217,7 +219,9 @@ public class GameGui extends javax.swing.JFrame {
             case 40:
                 Board.tiltBoardDown(board);
         }
-        Board.addRandom(board);
+        if(!Board.addRandom(board)){
+            JOptionPane.showMessageDialog(this, "Game Over");
+        }
         updateBoard();
     }//GEN-LAST:event_formKeyPressed
 
