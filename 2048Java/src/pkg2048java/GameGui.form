@@ -33,20 +33,20 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jTF00" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jTF6" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="jTF01" min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jTF5" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="jTF11" min="-2" pref="41" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTF7" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="jTF21" min="-2" pref="41" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTF8" min="-2" pref="41" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTF31" min="-2" pref="41" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jTF10" min="-2" pref="41" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="jTF20" min="-2" pref="41" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jTF30" min="-2" pref="41" max="-2" attributes="0"/>
@@ -55,39 +55,33 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jTF9" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jTF16" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="jTF02" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="jTF03" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButtonStart" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jTF40" min="-2" pref="41" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jTF31" min="-2" pref="41" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTF32" min="-2" pref="41" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTF33" min="-2" pref="41" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jTF14" min="-2" pref="41" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTF13" min="-2" pref="41" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTF12" min="-2" pref="41" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTF12" min="-2" pref="41" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTF22" min="-2" pref="41" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTF32" min="-2" pref="41" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTF13" min="-2" pref="41" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTF23" min="-2" pref="41" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTF33" min="-2" pref="41" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Component id="jButtonStart" min="-2" pref="68" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="14" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,38 +93,38 @@
                   <Component id="jTF00" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jTF20" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jTF30" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="jTF10" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTF5" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                      <Component id="jTF7" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                      <Component id="jTF8" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jTF11" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jTF31" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jTF21" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jTF6" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="jTF01" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTF9" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jTF14" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jTF13" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="jTF02" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="jTF22" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="jTF32" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jTF12" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="jTF31" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                      <Component id="jTF32" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="jTF33" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jTF23" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jTF16" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jTF03" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="jTF13" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButtonStart" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButtonStart" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTF40" min="-2" pref="41" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="60" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -142,31 +136,31 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTF30">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTF40">
+    <Component class="javax.swing.JTextField" name="jTF10">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTF5">
+    <Component class="javax.swing.JTextField" name="jTF11">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTF6">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTF7">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTF8">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTF9">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTF33">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTF31">
+    <Component class="javax.swing.JTextField" name="jTF01">
     </Component>
     <Component class="javax.swing.JTextField" name="jTF12">
     </Component>
     <Component class="javax.swing.JTextField" name="jTF13">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTF14">
+    <Component class="javax.swing.JTextField" name="jTF02">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTF33">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTF31">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTF23">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTF22">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTF21">
     </Component>
     <Component class="javax.swing.JTextField" name="jTF32">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTF16">
+    <Component class="javax.swing.JTextField" name="jTF03">
     </Component>
     <Component class="javax.swing.JButton" name="jButtonStart">
       <Properties>
