@@ -105,9 +105,7 @@ public class Board {
     public static int[][] makeCopy(int[][] board) {
         int[][] copy = new int[board.length][board.length];
         for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                copy[i][j]=board[i][j];                
-            }            
+            System.arraycopy(board[i], 0, copy[i], 0, board.length);            
         }
         return copy;
     }
