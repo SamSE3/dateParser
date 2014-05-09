@@ -5,6 +5,7 @@
  */
 package pkg2048java;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -232,29 +233,43 @@ public class GameGui extends javax.swing.JFrame {
     }//GEN-LAST:event_formKeyPressed
 
     private void updateBoard() {
-        jTF00.setText(makeCell(board[0][0]));
-        jTF10.setText(makeCell(board[0][1]));
-        jTF20.setText(makeCell(board[0][2]));
-        jTF30.setText(makeCell(board[0][3]));
+        setCell(jTF00, board[0][0]);
+        setCell(jTF10, board[0][1]);
+        setCell(jTF20, board[0][2]);
+        setCell(jTF30, board[0][3]);
 
-        jTF01.setText(makeCell(board[1][0]));
-        jTF11.setText(makeCell(board[1][1]));
-        jTF21.setText(makeCell(board[1][2]));
-        jTF31.setText(makeCell(board[1][3]));
+        setCell(jTF01, board[1][0]);
+        setCell(jTF11, board[1][1]);
+        setCell(jTF21, board[1][2]);
+        setCell(jTF31, board[1][3]);
 
-        jTF02.setText(makeCell(board[2][0]));
-        jTF12.setText(makeCell(board[2][1]));
-        jTF22.setText(makeCell(board[2][2]));
-        jTF32.setText(makeCell(board[2][3]));
+        setCell(jTF02, board[2][0]);
+        setCell(jTF12, board[2][1]);
+        setCell(jTF22, board[2][2]);
+        setCell(jTF32, board[2][3]);
 
-        jTF03.setText(makeCell(board[3][0]));
-        jTF13.setText(makeCell(board[3][1]));
-        jTF23.setText(makeCell(board[3][2]));
-        jTF33.setText(makeCell(board[3][3]));
+        setCell(jTF03, board[3][0]);
+        setCell(jTF13, board[3][1]);
+        setCell(jTF23, board[3][2]);
+        setCell(jTF33, board[3][3]);
     }
 
-    private String makeCell(int val) {
-        return (val == 0) ? "" : Integer.toString(val);
+    private void setCell(javax.swing.JTextField aJTF, int val) {
+        aJTF.setText((val == 0) ? "" : Integer.toString(val));
+        if (val == 0) { // do nothing
+        } else if (val < 17) {
+            aJTF.setForeground(Color.BLACK);
+        } else if (val < 65) {
+            aJTF.setForeground(Color.GREEN);
+        } else if (val < 257) {
+            aJTF.setForeground(Color.CYAN);
+        } else if (val < 513) {
+            aJTF.setForeground(Color.YELLOW);
+        } else if (val < 1025) {
+            aJTF.setForeground(Color.BLUE);
+        } else {
+            aJTF.setForeground(Color.RED);
+        }
     }
 
     /**
