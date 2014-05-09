@@ -221,25 +221,29 @@ public class GameGui extends javax.swing.JFrame {
     }//GEN-LAST:event_formKeyPressed
 
     private void updateBoard() {
-        jTF00.setText(Integer.toString(board[0][0]));
-        jTF10.setText(Integer.toString(board[1][0]));
-        jTF20.setText(Integer.toString(board[2][0]));
-        jTF30.setText(Integer.toString(board[3][0]));
+        jTF00.setText(makeCell(board[0][0]));
+        jTF10.setText(makeCell(board[1][0]));
+        jTF20.setText(makeCell(board[2][0]));
+        jTF30.setText(makeCell(board[3][0]));
 
-        jTF01.setText(Integer.toString(board[0][1]));
-        jTF11.setText(Integer.toString(board[1][1]));
-        jTF21.setText(Integer.toString(board[2][1]));
-        jTF31.setText(Integer.toString(board[3][1]));
+        jTF01.setText(makeCell(board[0][1]));
+        jTF11.setText(makeCell(board[1][1]));
+        jTF21.setText(makeCell(board[2][1]));
+        jTF31.setText(makeCell(board[3][1]));
 
-        jTF02.setText(Integer.toString(board[0][2]));
-        jTF12.setText(Integer.toString(board[1][2]));
-        jTF22.setText(Integer.toString(board[2][2]));
-        jTF32.setText(Integer.toString(board[3][2]));
+        jTF02.setText(makeCell(board[0][2]));
+        jTF12.setText(makeCell(board[1][2]));
+        jTF22.setText(makeCell(board[2][2]));
+        jTF32.setText(makeCell(board[3][2]));
 
-        jTF03.setText(Integer.toString(board[0][3]));
-        jTF13.setText(Integer.toString(board[1][3]));
-        jTF23.setText(Integer.toString(board[2][3]));
-        jTF33.setText(Integer.toString(board[3][3]));
+        jTF03.setText(makeCell(board[0][3]));
+        jTF13.setText(makeCell(board[1][3]));
+        jTF23.setText(makeCell(board[2][3]));
+        jTF33.setText(makeCell(board[3][3]));
+    }
+
+    private String makeCell(int val) {
+        return (val == 0) ? "" : Integer.toString(val);
     }
 
     /**
