@@ -14,12 +14,14 @@ import javax.swing.JOptionPane;
 public class GameGui extends javax.swing.JFrame {
 
     private int[][] board;
+    private boolean started;
 
     /**
      * Creates new form GameGui
      */
     public GameGui() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -200,29 +202,33 @@ public class GameGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
+        started = true;
         board = Board.makeRandomBoard(4);
         updateBoard();
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-        System.out.println(evt.getKeyCode());
-        switch (evt.getKeyCode()) {
-            case 37:
-                Board.tiltBoardLeft(board);
-                break;
-            case 38:
-                Board.tiltBoardUp(board);
-                break;
-            case 39:
-                Board.tiltBoardRight(board);
-                break;
-            case 40:
-                Board.tiltBoardDown(board);
+        if (started) {
+            System.out.println(evt.getKeyCode());
+            switch (evt.getKeyCode()) {
+                case 37:
+                    Board.tiltBoardLeft(board);
+                    break;
+                case 38:
+                    Board.tiltBoardUp(board);
+                    break;
+                case 39:
+                    Board.tiltBoardRight(board);
+                    break;
+                case 40:
+                    Board.tiltBoardDown(board);
+            }
+            if (!Board.addRandom(board)) {
+                started = false;
+                JOptionPane.showMessageDialog(this, "Game Over");
+            }
+            updateBoard();
         }
-        if(!Board.addRandom(board)){
-            JOptionPane.showMessageDialog(this, "Game Over");
-        }
-        updateBoard();
     }//GEN-LAST:event_formKeyPressed
 
     private void updateBoard() {
