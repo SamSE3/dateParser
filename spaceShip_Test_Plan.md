@@ -5,7 +5,7 @@ Mission statement.
 To provide a description of all testable and plan-able aspects of an intergalactic spaceship.
 
 General Description.
-The spaceship is intended to go on an intergalactic voyage to and from planet ‘GJ 180 b’ that lies in the habitable zone. The spaceship is capable of near light speed (0.98c) and will take 12.37 light years to reach the planet. In between the two planetary systems the crew will be kept alive in a hibernated sleep through stasis pods. During this time the crafts guidance systems will take over and keep the spaceship on track. PLEASE SEE THE PROJECT PLAN FOR ADDITIONAL DETAILS (would exist if real)
+The spaceship is intended to go on an intermilkyway- voyage to and from planet ‘GJ 180 b’ that lies in the habitable zone. The spaceship is capable of near light speed (0.98c) and will take 12.37 light years to reach the planet. In between the two planetary systems the crew will be kept alive in a hibernated sleep through stasis pods. During this time the crafts guidance systems will take over and keep the spaceship on track. PLEASE SEE THE PROJECT PLAN FOR ADDITIONAL DETAILS (would exist if real)
 
 Schedule (iterative every lab/work session).
 
