@@ -12,6 +12,8 @@ package pkg2048java;
  */
 public class GameGui extends javax.swing.JFrame {
 
+    private int[][] board;
+    
     /**
      * Creates new form GameGui
      */
@@ -143,9 +145,34 @@ public class GameGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
-        // TODO add your handling code here:
+        board=Board.makeRandomBoard(4);
+        updateBoard();
     }//GEN-LAST:event_jButtonStartActionPerformed
 
+    private void updateBoard(){
+        jTF00.setText(Integer.toString(board[0][0]));
+        jTF10.setText(Integer.toString(board[1][0]));
+        jTF20.setText(Integer.toString(board[2][0]));
+        jTF30.setText(Integer.toString(board[3][0]));
+        
+        jTF01.setText(Integer.toString(board[0][1]));
+        jTF11.setText(Integer.toString(board[1][1]));
+        jTF21.setText(Integer.toString(board[2][1]));
+        jTF31.setText(Integer.toString(board[3][1]));
+        
+        jTF02.setText(Integer.toString(board[0][2]));
+        jTF12.setText(Integer.toString(board[1][2]));
+        jTF22.setText(Integer.toString(board[2][2]));
+        jTF32.setText(Integer.toString(board[3][2]));
+        
+        jTF03.setText(Integer.toString(board[0][3]));
+        jTF13.setText(Integer.toString(board[1][3]));
+        jTF23.setText(Integer.toString(board[2][3]));
+        jTF33.setText(Integer.toString(board[3][3]));        
+    }
+    
+    
+    
     /**
      * @param args the command line arguments
      */
