@@ -1,11 +1,9 @@
 
-
 #Introduction
-Mission statement.     
-To write a program that emulates the game ‘2048’ as a means of introducing and getting to know sub versioning, unit testing and integration testing as part of Software Engineering 3.
+##General description
+Mission statement: To write a program that emulates the game ‘2048’ as a means of introducing and getting to know sub versioning, unit testing and integration testing as part of Software Engineering 3. The 2048 game is a sliding block game, where 2s or 4s are randomly inserted into a grid and rows/columns slided to add equal numbers 
 
-Schedule (iterative every lab/work session).
-
+##Schedule (iterative every lab/work session)
 |Half|what|
 |--------------|--------------|
 |1st|start writing code|
@@ -26,7 +24,7 @@ Software
 |Github 		|for version control|
 |C compiler	|to compile the source code|
 
-Testing tools 
+Testing tools
 
 |What		|why|
 |--------------|--------------|
@@ -39,22 +37,45 @@ Staff
 |me		|to do all the coding and testing|
 
 #Testable aspects
-Unit testing aspects
+Unit tested functions
 * Tilting a row left
- * Tilting a row right
- * Tilting a column up
- * Tilting a column down
-* Tilting the board left
- * Tilting the board right
+More specifically the following rules/functionality is tested using one or more test per each:
+ * empty rows stay empty 
+ * values move to the left
+ * values combine
+ * non-combinable values don't combine
+ * combining is not affected by position
+ * combines leftmost and doesn’t combine twice
+ * mixtures of combines and non combines works as expected
+
+* Tilting a row right 
+As per the above except to the right
+
+* Tilting the board left (uses tilt row left)
+ * output is expected
+
+* Tilting the board right (uses tilt row right)
+ * output is expected
+
+The following use the above respectively combined with flip Left (bellow)
  * Tilting the board up
  * Tilting the board down
-* Random insertion of a number into the game
-* Flipping the board left
- * Flipping the board right
-* Create an empty board
 
+* flip left ( flips across the diagonal such that rows become columns and columns become rows)
+ * rotates as expected
+(There is little chance of error as swapping the row and column variables in a loop of the original board can be used to check a flipped).
+
+* Create an empty board
+ * board is empty
+
+* random insertion
+ * insertion position changes
+ * insertion number is always 2 (changed from 2 and 4)
+ * insertion does not occur every move
+ * does not insert if not available space
+ 
 Integration testing aspects
-* Test tilting left then tilting right
+* Test tilting left then tilting right (not sure if this is needed)
 
 #Non Testable aspects
 * Any graphical user interface that uses these methods
@@ -68,10 +89,9 @@ Integration testing aspects
 * That there will not be enough time to complete the project given other staff commitments
 
 #Project Criteria
-Goals      
-The aim is that all possible types of input are tested and that the program passes these tests
+Goal
 
-Success and Failure measured by               
+Success and Failure measured by
 Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the program
 	
 #References
