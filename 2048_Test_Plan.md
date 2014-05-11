@@ -47,27 +47,20 @@ More specifically the following rules/functionality is tested using one or more 
  * combining is not affected by position
  * combines leftmost and doesn’t combine twice
  * mixtures of combines and non combines works as expected
-
 * Tilting a row right 
-As per the above except to the right
-
+ * As per the above except to the right
 * Tilting the board left (uses tilt row left)
  * output is expected
-
 * Tilting the board right (uses tilt row right)
  * output is expected
-
-The following use the above respectively combined with flip Left (bellow)
- * Tilting the board up
- * Tilting the board down
-
+* Tilting the board up (uses tilt left with flip Left before and after)
+ * output is expected
+* Tilting the board down (uses tilt right with flip Left before and after)
+ * output is expected
 * flip left ( flips across the diagonal such that rows become columns and columns become rows)
- * rotates as expected
-(There is little chance of error as swapping the row and column variables in a loop of the original board can be used to check a flipped).
-
+ * rotates as expected NOTE: There is little chance of error as swapping the row and column variables in a loop of the original board can be used to check a flipped.
 * Create an empty board
  * board is empty
-
 * random insertion
  * insertion position changes
  * insertion number is always 2 (changed from 2 and 4)
