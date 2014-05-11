@@ -1,7 +1,7 @@
 
 #Introduction
 ##General description
-Mission statement: To write a program that emulates the game ‘2048’ as a means of introducing and getting to know sub versioning, unit testing and integration testing as part of Software Engineering 3. The 2048 game is a sliding block game, where 2s or 4s are randomly inserted into a grid and rows/columns slided to add equal numbers 
+Mission statement: To write a program that emulates the game ‘2048’ as a means of introducing and getting to know sub versioning, unit testing and integration testing as part of Software Engineering 3. The 2048 game is a sliding block game, where 2s or 4s are randomly inserted into a grid and rows/columns slided to add equal numbers.
 
 ##Schedule (iterative every lab/work session)
 |Half|what|
@@ -37,9 +37,8 @@ Staff
 |me		|to do all the coding and testing|
 
 #Testable aspects
-Unit tested functions
+Unit tested functions with tests
 * Tilting a row left
-More specifically the following rules/functionality is tested using one or more test per each:
  * empty rows stay empty 
  * values move to the left
  * values combine
@@ -82,10 +81,9 @@ Integration testing aspects
 * That there will not be enough time to complete the project given other staff commitments
 
 #Project Criteria
-Goal
+Goal: To ensure that the 2048 games methods perform according to the rules of the game.
 
-Success and Failure measured by
-Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the program
+Success and Failure measured by: Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the program
 	
 #References
 * Using outline as per http://www.wikihow.com/Write-a-Test-Plan
