@@ -1,10 +1,8 @@
 #Introduction
-Mission statement.  
-
+Mission statement.     
 To provide a description of all testable and plan-able aspects of an intergalactic spaceship.
 
 General Description.
-
 The spaceship is intended to go on an intra-galactic voyage to and from planet ‘GJ 180 b’ that lies in the habitable zone. The spaceship is capable of near light speed (0.98c) and will take 12.37 light years to reach the planet. In between the two planetary systems the crew will be kept alive in a hibernated sleep through stasis pods. During this time the crafts guidance systems will take over and keep the spaceship on track. Please see the project plan for additional details (would exist if real)
 
 Schedule (iterative every lab/work session).
@@ -47,7 +45,6 @@ Software
 |the rocket controller|
 |the climate controller|
 |the generator controller|
-|the navigation controller|
 |the atmosphere controller|
 |the intra-ship communications|
 |the communication controller|
@@ -87,8 +84,40 @@ Unit testing aspects
  * that spacesuits life-support systems work effectively.
  * that all possible multiple component failures have the backup parts required to fix them.
 * Software testable aspects
- * that systems can detect broken components and start secondary systems then shutdown to prevent further damage.
-…
+ * the guidance controller
+  * verify the sensitivity of its inertial gyroscopes using GPS data, speedometers air speed tubes etc.
+  * tests its rocket burst durations and angles against the physics required to make turns and other movements.
+ * the rocket controller
+  * tests thrust ratios against expected
+  * test burn lengths against expected
+  * test that thrust levels are sustained or are compensated
+ * the climate controller
+  * too hot cools down
+  * too cold then warms up
+  * sends warm air to cool areas
+  * sends cold air to warm areas
+ * the generator controller
+  * power output does not fluctuate
+  * power capacity is always within 10% of maximum
+  * power output increase as draw increases 
+ * the atmosphere controller
+  * oxygen levels increase if CO2 becomes to high
+  * nitrogen levels remain constant
+  * carbon dioxide is always removed
+  * alerts if CO2 is not being filtered
+ * the intra-ship communications
+  * all connections can be established
+  * incoming communications don’t break current communications
+ * the communication controller
+  * can compress wave forms to account for going away from earth
+  * can expand wave forms to account for going to earth
+ * the water purifier controller
+  * removes (or within tolerances) Suspended Particles, Colloids, Dissolved Inorganic Solids, Dissolved Organics, Dissolved Gases, Microorganisms, Pyrogens and Viruses and Nucleases and DNA
+  * alerts when filters are clogged
+ * the stasis pod controllers
+  * can ‘freeze’ without shocking the subject
+  * can maintain stasis within tolerances
+  * can ‘unfreeze’ without shocking the subject
 
 Integration testing aspects
 * test how components perform in conjunction to each in vacuum under real test conditions.
@@ -98,7 +127,7 @@ Integration testing aspects
 …
 
 #Non Testable aspects
-* crew related aspects (training selection ability)
+* any crew related aspects such as training, selection and ability
 
 #Test Produced documents
 * The specifics of each test, if those tests pass and the information and reason for their modification.
@@ -116,4 +145,3 @@ Success and Failure measured by: Success will be measured based on the amount of
 * Using outline as per http://www.wikihow.com/Write-a-Test-Plan
 * Markdown as per https://help.github.com/articles/markdown-basics and https://help.github.com/articles/github-flavored-markdown
 * http://exoplanet.eu/catalog/gj_180_b/
-
