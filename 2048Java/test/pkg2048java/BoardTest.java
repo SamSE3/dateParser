@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package pkg2048java;
 
 import org.junit.After;
@@ -16,7 +15,7 @@ import static org.junit.Assert.*;
  * @author SuperNova
  */
 public class BoardTest {
-    
+
     public BoardTest() {
     }
     int[][] board, board0, board1;
@@ -32,7 +31,7 @@ public class BoardTest {
         board1 = new int[][]{{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}};
         //size = 4;
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -53,15 +52,20 @@ public class BoardTest {
         System.out.println("addRandom");
         int nosToAdd = 2;
         int org, res;
-        assertEquals("sub method numbers does not work", 2, numbers(new int[][]{{1,0},{0,1}}));        
-        org = numbers(board);
-        Board.addRandom(board, nosToAdd);
-        res = numbers(board);
-        assertEquals("does not add the right amount of numbers", nosToAdd,res - org);
-        org=16;
-        assertEquals("sets a number to zero",  numbers(board1),16);
+
+        assertEquals("sub method numbers does not work", 2, numbers(new int[][]{{1, 0}, {0, 1}}));
+        org = 2;
+        for (int i = 0; i < 10; i++) {
+            board = new int[][]{{1, 0}, {0, 1}};
+            Board.addRandom(board, nosToAdd);
+            res = numbers(board);
+            assertEquals("does not add the right amount of numbers", nosToAdd, res - org);
+        }
+
+        org = 16;
+        assertEquals("sets a number to zero", numbers(board1), 16);
         res = numbers(board1);
-    }    
+    }
 
     private int numbers(int[][] board) {
         int nums = 0;
@@ -73,7 +77,7 @@ public class BoardTest {
             }
         }
         return nums;
-    }    
+    }
 
     @Test
     public void testMakeRandomBoard() {
@@ -126,8 +130,7 @@ public class BoardTest {
         //Board.printBoard(board);
         org.junit.Assert.assertArrayEquals("tilt board right", board2, board);
     }
-    
-    
+
     @Test
     public void testTiltBoardUp() {
         System.out.println("tiltBoardUp");
@@ -154,7 +157,6 @@ public class BoardTest {
         org.junit.Assert.assertArrayEquals("tilt board down", board2, board);
     }
 
-
     @Test
     public void testFlipBoardLeft() {
         System.out.println("flipBoardLeft");
@@ -165,6 +167,27 @@ public class BoardTest {
             {2, 0, 2, 0},
             {3, 0, 2, 0},
             {4, 1, 4, 0}});
+        board = new int[][]{
+            {1, 0, 0},
+            {0, 2, 0},
+            {0, 0, 3}};
+        Board.flipBoardLeft(board);
+        assertArrayEquals("diagonals remain",
+                new int[][]{
+                    {1, 0, 0},
+                    {0, 2, 0},
+                    {0, 0, 3}},board
+        );
+        board = new int[][]{
+            {0, 2, 0},
+            {1, 0, 0},
+            {0, 0, 0}};
+        Board.flipBoardLeft(board);
+        assertArrayEquals("diagonals remain",
+                new int[][]{
+                    {0, 1, 0},
+                    {2, 0, 0},
+                    {0, 0, 0}},board);
     }
 
     @Test
@@ -177,7 +200,7 @@ public class BoardTest {
     @Test
     public void testPrintBoard() {
         System.out.println("printBoard");
-        Board.printBoard(board);        
+        Board.printBoard(board);
     }
-    
+
 }

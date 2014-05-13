@@ -5,6 +5,8 @@
  */
 package pkg2048java;
 
+import com.sun.org.apache.bcel.internal.Constants;
+
 /**
  *
  * @author SuperNova
@@ -21,7 +23,7 @@ public class Board {
     public static boolean addRandom(int[][] board, int nosToAdd) {
         int[] x = new int[board.length * board.length],
                 y = new int[board.length * board.length];
-        int tot = 0;
+        int tot = 0, rtot;
         // find the non zero values
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
@@ -36,12 +38,19 @@ public class Board {
         if (tot == 0) {
             return false;
         }
+        rtot = tot;
         // add numbers in random positions
         while (nosToAdd > 0) {
             int cell = (int) (tot * Math.random());
             int val = 2;
-            board[x[cell]][y[cell]] = val;
-            nosToAdd--;
+            if (board[x[cell]][y[cell]] == 0) {
+                board[x[cell]][y[cell]] = val;
+                nosToAdd--;
+                rtot--;
+                if (rtot == 0) {
+                    break;
+                }
+            }
         }
         // numbers must of been added
         return true;
@@ -105,11 +114,10 @@ public class Board {
     public static int[][] makeCopy(int[][] board) {
         int[][] copy = new int[board.length][board.length];
         for (int i = 0; i < board.length; i++) {
-            System.arraycopy(board[i], 0, copy[i], 0, board.length);            
+            System.arraycopy(board[i], 0, copy[i], 0, board.length);
         }
         return copy;
     }
-
 
     public static void printBoard(int[][] board) {
         int maxLength = 0;
@@ -127,7 +135,7 @@ public class Board {
         for (int i = 0; i < board.length; i++) {
             sb.append('{');
             for (int j = 0; j < board.length - 1; j++) {
-                sb.append(addPadding(board[i][j], maxLength)); 
+                sb.append(addPadding(board[i][j], maxLength));
                 // add padding to the string to make all cells of equal size
                 sb.append(" ");// always 1 space between cells
             }

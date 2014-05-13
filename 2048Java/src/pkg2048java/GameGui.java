@@ -285,7 +285,7 @@ public class GameGui extends javax.swing.JFrame {
                     Board.tiltBoardDown(board);
             }
             if (!Board.addRandom(board)) {
-                started = false;
+                //started = false;
                 JOptionPane.showMessageDialog(this, "Game Over");
             }
             updateBoard();
