@@ -43,7 +43,8 @@ Unit tested functions with tests
  * values move to the left
  * values combine
  * non-combinable values don't combine
- * combining is not affected by position
+ * combining adjoining pairs is not affected by position
+ * combining seperated pairs is not affected by position
  * combines leftmost and doesn’t combine twice
  * mixtures of combines and non combines works as expected
 * Tilting a row right 
@@ -56,7 +57,7 @@ Unit tested functions with tests
  * output is expected
 * Tilting the board down (uses tilt right with flip Left before and after)
  * output is expected
-* flip left ( flips across the diagonal such that rows become columns and columns become rows)
+* flip left (flips across the diagonal such that rows become columns and columns become rows)
  * rotates as expected NOTE: There is little chance of error as swapping the row and column variables in a loop of the original board can be used to check a flipped.
 * Create an empty board
  * board is empty
@@ -64,7 +65,7 @@ Unit tested functions with tests
  * insertion position changes
  * insertion number is always 2 (changed from 2 and 4)
  * insertion does not occur every move
- * does not insert if not available space
+ * does not insert if there is no available space
  
 Integration testing aspects
 * Test tilting left then tilting right (not sure if this is needed)
@@ -83,7 +84,7 @@ Integration testing aspects
 #Project Criteria
 Goal: To ensure that the 2048 games methods perform according to the rules of the game.
 
-Success and Failure measured by: Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the program
+Success and Failure measured by: Success will be measured based on the amount of tests that pass combined with their relevance to the core functionality of the 2048 program.
 	
 #References
 * Using outline as per http://www.wikihow.com/Write-a-Test-Plan
