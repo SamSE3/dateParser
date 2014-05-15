@@ -8,7 +8,6 @@ package pkg2048java;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -57,7 +56,10 @@ public class TiltTest {
         org.junit.Assert.assertArrayEquals("dosen't move far right values left", new int[]{9, 0, 0, 0, 0, 0, 0}, Tilt.tiltLeft(new int[]{0, 0, 0, 0, 0, 0, 9}));
         org.junit.Assert.assertArrayEquals("first value 0", new int[]{1, 2, 3, 4, 5, 6, 0}, Tilt.tiltLeft(new int[]{0, 1, 2, 3, 4, 5, 6}));
         org.junit.Assert.assertArrayEquals("second value 0", new int[]{1, 2, 3, 4, 5, 6, 0}, Tilt.tiltLeft(new int[]{1, 0, 2, 3, 4, 5, 6}));
-        org.junit.Assert.assertArrayEquals("first and second values 0", new int[]{4, 4, 5, 6, 0, 0, 0}, Tilt.tiltLeft(new int[]{0, 0, 2, 2, 4, 5, 6}));
+        org.junit.Assert.assertArrayEquals("first and second values 0", new int[]{4, 4, 5, 6, 0, 0, 0}, Tilt.tiltLeft(new int[]{0, 0, 2, 2, 4, 5, 6}));        
+        org.junit.Assert.assertArrayEquals("dosent move and combine alternating values", new int[]{4, 4, 0, 0, 0, 0, 0}, Tilt.tiltLeft(new int[]{2, 0, 2, 0, 2, 0, 2}));
+        
+        
 
     }
 
@@ -81,7 +83,7 @@ public class TiltTest {
     @Test
     public void testPrintRow() {
         System.out.println("printRow");
-        int[] row = null;
+        //int[] row = null;
         Tilt.printRow(new int[]{0, 1, 4, 1});
     }
 

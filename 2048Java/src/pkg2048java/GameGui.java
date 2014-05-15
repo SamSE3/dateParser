@@ -60,6 +60,7 @@ public class GameGui extends javax.swing.JFrame {
                 formKeyPressed(evt);
             }
         });
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jTF00.setEditable(false);
         jTF00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -67,6 +68,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF00.setAlignmentY(0.0F);
         jTF00.setFocusable(false);
         jTF00.setMargin(new java.awt.Insets(-10, -10, -10, -10));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 58;
+        gridBagConstraints.ipady = 44;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF00, gridBagConstraints);
 
         jTF20.setEditable(false);
         jTF20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -74,6 +82,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF20.setAlignmentY(0.0F);
         jTF20.setFocusable(false);
         jTF20.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF20, gridBagConstraints);
 
         jTF30.setEditable(false);
         jTF30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -82,6 +97,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF30.setFocusable(false);
         jTF30.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jTF30.setRequestFocusEnabled(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        getContentPane().add(jTF30, gridBagConstraints);
 
         jTF10.setEditable(false);
         jTF10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -89,6 +111,14 @@ public class GameGui extends javax.swing.JFrame {
         jTF10.setAlignmentY(0.0F);
         jTF10.setFocusable(false);
         jTF10.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF10, gridBagConstraints);
+        jTF10.getAccessibleContext().setAccessibleDescription("");
 
         jTF11.setEditable(false);
         jTF11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -96,6 +126,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF11.setAlignmentY(0.0F);
         jTF11.setFocusable(false);
         jTF11.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF11, gridBagConstraints);
 
         jTF01.setEditable(false);
         jTF01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -103,6 +140,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF01.setAlignmentY(0.0F);
         jTF01.setFocusable(false);
         jTF01.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF01, gridBagConstraints);
 
         jTF12.setEditable(false);
         jTF12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -110,6 +154,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF12.setAlignmentY(0.0F);
         jTF12.setFocusable(false);
         jTF12.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF12, gridBagConstraints);
 
         jTF13.setEditable(false);
         jTF13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -117,6 +168,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF13.setAlignmentY(0.0F);
         jTF13.setFocusable(false);
         jTF13.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF13, gridBagConstraints);
 
         jTF02.setEditable(false);
         jTF02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -124,6 +182,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF02.setAlignmentY(0.0F);
         jTF02.setFocusable(false);
         jTF02.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF02, gridBagConstraints);
 
         jTF33.setEditable(false);
         jTF33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -131,6 +196,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF33.setAlignmentY(0.0F);
         jTF33.setFocusable(false);
         jTF33.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        getContentPane().add(jTF33, gridBagConstraints);
 
         jTF31.setEditable(false);
         jTF31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -138,6 +210,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF31.setAlignmentY(0.0F);
         jTF31.setFocusable(false);
         jTF31.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        getContentPane().add(jTF31, gridBagConstraints);
 
         jTF23.setEditable(false);
         jTF23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -145,6 +224,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF23.setAlignmentY(0.0F);
         jTF23.setFocusable(false);
         jTF23.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF23, gridBagConstraints);
 
         jTF22.setEditable(false);
         jTF22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -152,6 +238,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF22.setAlignmentY(0.0F);
         jTF22.setFocusable(false);
         jTF22.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF22, gridBagConstraints);
 
         jTF21.setEditable(false);
         jTF21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -159,6 +252,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF21.setAlignmentY(0.0F);
         jTF21.setFocusable(false);
         jTF21.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF21, gridBagConstraints);
 
         jTF32.setEditable(false);
         jTF32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -166,6 +266,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF32.setAlignmentY(0.0F);
         jTF32.setFocusable(false);
         jTF32.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        getContentPane().add(jTF32, gridBagConstraints);
 
         jTF03.setEditable(false);
         jTF03.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -173,6 +280,13 @@ public class GameGui extends javax.swing.JFrame {
         jTF03.setAlignmentY(0.0F);
         jTF03.setFocusable(false);
         jTF03.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.ipady = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(jTF03, gridBagConstraints);
 
         jButtonStart.setText("Start");
         jButtonStart.setFocusable(false);
@@ -181,83 +295,12 @@ public class GameGui extends javax.swing.JFrame {
                 jButtonStartActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTF00, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF30, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTF01, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTF02, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF22, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTF03, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTF33, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jButtonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTF10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTF00, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTF20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF30, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTF01, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTF02, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF22, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTF03, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTF33, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addComponent(jButtonStart))
-        );
-
-        jTF10.getAccessibleContext().setAccessibleDescription("");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 11;
+        getContentPane().add(jButtonStart, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -61,17 +61,14 @@ public class BoardTest {
             res = numbers(board);
             assertEquals("does not add the right amount of numbers", nosToAdd, res - org);
         }
-
-        org = 16;
         assertEquals("sets a number to zero", numbers(board1), 16);
-        res = numbers(board1);
     }
 
     private int numbers(int[][] board) {
         int nums = 0;
-        for (int i = 0; i < board.length; i++) {
+        for (int[] board2 : board) {
             for (int j = 0; j < board.length; j++) {
-                if (board[i][j] != 0) {
+                if (board2[j] != 0) {
                     nums++;
                 }
             }
@@ -86,9 +83,9 @@ public class BoardTest {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 if (result[i][j] != 0 && result[i][j] != 2 && result[i][j] != 4 && result[i][j] != 8) {
-                    fail("random board generates a number which is nit 0,2,4 or 8");
+                    fail("random board generates a number which is not 0, 2, 4 or 8");
                 }
-            }
+            } 
         }
     }
 
@@ -167,6 +164,7 @@ public class BoardTest {
             {2, 0, 2, 0},
             {3, 0, 2, 0},
             {4, 1, 4, 0}});
+
         board = new int[][]{
             {1, 0, 0},
             {0, 2, 0},
@@ -176,8 +174,8 @@ public class BoardTest {
                 new int[][]{
                     {1, 0, 0},
                     {0, 2, 0},
-                    {0, 0, 3}},board
-        );
+                    {0, 0, 3}}, board);
+
         board = new int[][]{
             {0, 2, 0},
             {1, 0, 0},
@@ -187,7 +185,7 @@ public class BoardTest {
                 new int[][]{
                     {0, 1, 0},
                     {2, 0, 0},
-                    {0, 0, 0}},board);
+                    {0, 0, 0}}, board);
     }
 
     @Test
