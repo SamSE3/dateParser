@@ -6,9 +6,11 @@
 package pkg2048java;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.BeforeClass;
 
 /**
  *
@@ -21,15 +23,24 @@ public class BoardTest {
     int[][] board, board0, board1;
     int size;
 
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+
     @Before
     public void setUp() {
+        Board aBoard = new Board();
         board = new int[][]{{1, 2, 3, 4},
         {1, 0, 0, 1},
         {4, 2, 2, 4},
         {0, 0, 0, 0}};
         board0 = new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
         board1 = new int[][]{{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}};
-        //size = 4;
+        size = 4;
     }
 
     @After
@@ -85,21 +96,29 @@ public class BoardTest {
                 if (result[i][j] != 0 && result[i][j] != 2 && result[i][j] != 4 && result[i][j] != 8) {
                     fail("random board generates a number which is not 0, 2, 4 or 8");
                 }
-            } 
+            }
+        }
+        assertTrue("zero sized boards don't return null", Board.makeRandomBoard(0) == null);
+        assertTrue("negative sized boards don't return null", Board.makeRandomBoard(-1) == null);
+    }
+
+    private void allZero(int[][] result) {
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result.length; j++) {
+                if (result[i][j] != 0) {
+                    fail("random board of size " + result.length + " generates a number which is not 0 at " + i + ", " + j);
+                }
+            }
         }
     }
 
     @Test
     public void testMakeBoard() {
         System.out.println("makeBoard");
-        int[][] result = Board.makeBoard(size);
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                if (result[i][j] != 0) {
-                    fail("random board generates a number which is 0");
-                }
-            }
-        }
+        allZero(Board.makeBoard(size));
+        allZero(Board.makeBoard(10));
+        assertTrue("zero sized boards don't return null", Board.makeBoard(0) == null);
+        assertTrue("negative sized boards don't return null", Board.makeBoard(-1) == null);
     }
 
     @Test
@@ -199,6 +218,20 @@ public class BoardTest {
     public void testPrintBoard() {
         System.out.println("printBoard");
         Board.printBoard(board);
+    }
+
+    /**
+     * Test of addPadding method, of class Board.
+     */
+    @Test
+    public void testAddPadding() {
+        System.out.println("addPadding");
+        assertEquals(Board.addPadding(0, 0), "0");
+        assertEquals(Board.addPadding(1, 1), "1");
+        assertEquals(Board.addPadding(-1, 0), "-1");
+        assertEquals(Board.addPadding(0, -1), "0");
+        assertEquals(Board.addPadding(16, 3), " 16");
+        assertEquals(Board.addPadding(8, 3), "  8");
     }
 
 }

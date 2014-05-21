@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Board.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;2048Java&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">pkg2048java</a> &gt; <span class="el_source">Board.java</span></div><h1>Board.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pkg2048java;
+
+import com.sun.org.apache.bcel.internal.Constants;
+
+/**
+ *
+ * @author SuperNova
+ */
+<span class="fc" id="L14">public class Board {</span>
+
+    public static final int MRTA = 1;
+
+    public static boolean addRandom(int[][] board) {
+<span class="fc" id="L19">        int nosToAdd = (int) ((MRTA + 1) * Math.random()); //1;//</span>
+<span class="fc" id="L20">        return addRandom(board, nosToAdd);</span>
+    }
+
+    public static boolean addRandom(int[][] board, int nosToAdd) {
+<span class="fc" id="L24">        int[] x = new int[board.length * board.length],</span>
+<span class="fc" id="L25">                y = new int[board.length * board.length];</span>
+<span class="fc" id="L26">        int tot = 0, rtot;</span>
+        // find the non zero values
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">            for (int j = 0; j &lt; board.length; j++) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">                if (board[i][j] == 0) {</span>
+<span class="fc" id="L31">                    x[tot] = i;</span>
+<span class="fc" id="L32">                    y[tot] = j;</span>
+<span class="fc" id="L33">                    tot++;</span>
+                }
+            }
+        }
+        //if cannot add anything return false
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (tot == 0) {</span>
+<span class="fc" id="L39">            return false;</span>
+        }
+<span class="fc" id="L41">        rtot = tot;</span>
+        // add numbers in random positions
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        while (nosToAdd &gt; 0) {</span>
+<span class="fc" id="L44">            int cell = (int) (tot * Math.random());</span>
+<span class="fc" id="L45">            int val = 2;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            if (board[x[cell]][y[cell]] == 0) {</span>
+<span class="fc" id="L47">                board[x[cell]][y[cell]] = val;</span>
+<span class="fc" id="L48">                nosToAdd--;</span>
+<span class="fc" id="L49">                rtot--;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">                if (rtot == 0) {</span>
+<span class="fc" id="L51">                    break;</span>
+                }
+            }
+<span class="fc" id="L54">        }</span>
+        // numbers must of been added
+<span class="fc" id="L56">        return true;</span>
+    }
+
+    public static int[][] makeRandomBoard(int size) {
+<span class="fc" id="L60">        int[][] board = makeBoard(size);</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        if (board !=null) addRandom(board, 3);</span>
+<span class="fc" id="L62">        return board;</span>
+    }
+
+    public static int[][] makeBoard(int size) {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (size &lt;= 0) {</span>
+<span class="fc" id="L67">            System.out.println(&quot;null board &quot;+size);</span>
+<span class="fc" id="L68">            return null;                        </span>
+        }
+<span class="fc" id="L70">        int[][] board = new int[size][size];</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        for (int i = 0; i &lt; size; i++) {</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">            for (int j = 0; j &lt; size; j++) {</span>
+<span class="fc" id="L73">                board[i][j] = 0;</span>
+            }
+        }
+<span class="fc" id="L76">        return board;</span>
+    }
+
+    public static void tiltBoardLeft(int[][] board) {
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc" id="L81">            board[i] = Tilt.tiltLeft(board[i]);</span>
+        }
+<span class="fc" id="L83">    }</span>
+
+    public static void tiltBoardRight(int[][] board) {
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc" id="L87">            board[i] = Tilt.tiltRight(board[i]);</span>
+        }
+<span class="fc" id="L89">    }</span>
+
+    public static void tiltBoardDown(int[][] board) {
+<span class="fc" id="L92">        flipBoardLeft(board);</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc" id="L94">            board[i] = Tilt.tiltRight(board[i]);</span>
+        }
+<span class="fc" id="L96">        flipBoardLeft(board);</span>
+<span class="fc" id="L97">    }</span>
+
+    public static void tiltBoardUp(int[][] board) {
+<span class="fc" id="L100">        flipBoardLeft(board);</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc" id="L102">            board[i] = Tilt.tiltLeft(board[i]);</span>
+        }
+<span class="fc" id="L104">        flipBoardLeft(board);</span>
+<span class="fc" id="L105">    }</span>
+
+    public static void flipBoardLeft(int[][] board) {
+        int temp;
+<span class="fc bfc" id="L109" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc bfc" id="L110" title="All 2 branches covered.">            for (int j = i + 1; j &lt; board.length; j++) {</span>
+<span class="fc" id="L111">                temp = board[i][j];</span>
+<span class="fc" id="L112">                board[i][j] = board[j][i];</span>
+<span class="fc" id="L113">                board[j][i] = temp;</span>
+            }
+        }
+<span class="fc" id="L116">    }</span>
+
+    public static int[][] makeCopy(int[][] board) {
+<span class="fc" id="L119">        int[][] copy = new int[board.length][board.length];</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc" id="L121">            System.arraycopy(board[i], 0, copy[i], 0, board.length);</span>
+        }
+<span class="fc" id="L123">        return copy;</span>
+    }
+
+    public static void printBoard(int[][] board) {
+<span class="fc" id="L127">        int maxLength = 0;</span>
+        // get the maximum width of the cell
+<span class="fc bfc" id="L129" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc bfc" id="L130" title="All 2 branches covered.">            for (int j = 0; j &lt; board.length; j++) {</span>
+<span class="fc" id="L131">                int cellLength = Integer.toString(board[i][j]).length();</span>
+<span class="fc bfc" id="L132" title="All 2 branches covered.">                if (cellLength &gt; maxLength) {</span>
+<span class="fc" id="L133">                    maxLength = cellLength;</span>
+                }
+            }
+        }
+<span class="fc" id="L137">        StringBuilder sb = new StringBuilder();</span>
+        //add the rows to a string
+<span class="fc bfc" id="L139" title="All 2 branches covered.">        for (int i = 0; i &lt; board.length; i++) {</span>
+<span class="fc" id="L140">            sb.append('{');</span>
+<span class="fc bfc" id="L141" title="All 2 branches covered.">            for (int j = 0; j &lt; board.length - 1; j++) {</span>
+<span class="fc" id="L142">                sb.append(addPadding(board[i][j], maxLength));</span>
+                // add padding to the string to make all cells of equal size
+<span class="fc" id="L144">                sb.append(&quot; &quot;);// always 1 space between cells</span>
+            }
+<span class="fc" id="L146">            sb.append(addPadding(board[i][board.length - 1], maxLength));</span>
+<span class="fc" id="L147">            sb.append(&quot;}\n&quot;);</span>
+        }
+        //print it
+<span class="fc" id="L150">        System.out.println(sb);</span>
+<span class="fc" id="L151">    }</span>
+
+    public static String addPadding(int number, int pad) {
+<span class="fc" id="L154">        String str = Integer.toString(number);</span>
+<span class="fc" id="L155">        pad -= str.length();</span>
+        //enable the following to center the numbers rather than hard left
+//        while (pad &gt; pad / 2) {
+//            str = &quot; &quot; + str;
+//            pad--;
+//        }
+<span class="fc" id="L161">        String padStr = &quot;&quot;;</span>
+<span class="fc bfc" id="L162" title="All 2 branches covered.">        while (pad &gt; 0) {</span>
+<span class="fc" id="L163">            padStr += &quot; &quot;;</span>
+<span class="fc" id="L164">            pad--;</span>
+        }
+<span class="fc" id="L166">        return (padStr + str);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

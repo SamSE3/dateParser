@@ -58,11 +58,15 @@ public class Board {
 
     public static int[][] makeRandomBoard(int size) {
         int[][] board = makeBoard(size);
-        addRandom(board, 3);
+        if (board !=null) addRandom(board, 3);
         return board;
     }
 
     public static int[][] makeBoard(int size) {
+        if (size <= 0) {
+            System.out.println("null board "+size);
+            return null;                        
+        }
         int[][] board = new int[size][size];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
@@ -146,8 +150,8 @@ public class Board {
         System.out.println(sb);
     }
 
-    private static String addPadding(int cell, int pad) {
-        String str = Integer.toString(cell);
+    public static String addPadding(int number, int pad) {
+        String str = Integer.toString(number);
         pad -= str.length();
         //enable the following to center the numbers rather than hard left
 //        while (pad > pad / 2) {
